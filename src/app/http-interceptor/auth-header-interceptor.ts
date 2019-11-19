@@ -9,7 +9,7 @@ export class AuthHeaderInterceptor implements HttpInterceptor {
                next: HttpHandler 
                ): Observable<HttpEvent<any>> {
 
-            const accessToken = 'localStorage';
+            const accessToken = localStorage.getItem('cookie');
 
         if (accessToken) {
             const cloned = req.clone({

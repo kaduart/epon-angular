@@ -22,7 +22,11 @@ export class UserService {
         const params = JSON.stringify({ user });
         console.log(user);
 
-        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        const headers = new HttpHeaders();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Accept', 'application/json');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Credentials', 'true');
 
         return this.http.post<User>(this.rootUrl + '/login', params, { headers });
         // const httpOptions = {
