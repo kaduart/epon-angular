@@ -19,7 +19,7 @@ export class UserService {
 
     userAuthentication(user: User): Observable<User> {
 
-        const params = JSON.stringify({ user });
+        const params = JSON.stringify( user );
         console.log(user);
 
         const headers = new HttpHeaders();

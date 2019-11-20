@@ -9,23 +9,9 @@ export class AuthHeaderInterceptor implements HttpInterceptor {
                next: HttpHandler 
                ): Observable<HttpEvent<any>> {
 
-            const accessToken = localStorage.getItem('cookie');
-
-        if (accessToken) {
             const cloned = req.clone({
-                headers: req.headers.set('Authorization',
-                    'Token-here' + accessToken)
+                headers: req.headers.set('Content-Type','application/json')
             });
-
-            console.log('Token added to HTTP request', accessToken);
-
             return next.handle(cloned);
-        }
-        else {
-            //No token; proceed request without bearer token
-            console.log('No token added to HTTP request');
-            return next.handle(req);
-        }
-
     }
 } 
