@@ -24,8 +24,7 @@ export class SignInComponent implements OnInit {
   fazerLogin( ) {
     this.userService.userAuthentication(this.usuario)
       .subscribe((
-        data: any) => {
-          localStorage.setItem('userToken', data.cookie);
+        res: Response) => {
           this.router.navigate(['/home']);
     },
     (err: HttpErrorResponse) => {

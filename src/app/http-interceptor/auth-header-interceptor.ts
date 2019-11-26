@@ -1,17 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { UserService } from '../user/user.service';
 
 @Injectable()
 export class AuthHeaderInterceptor implements HttpInterceptor {
 
-    intercept( req: HttpRequest<any>, 
-               next: HttpHandler 
-               ): Observable<HttpEvent<any>> {
+    constructor(private userService: UserService) { }
 
-            const cloned = req.clone({
-                headers: req.headers.set('Content-Type','application/json')
-            });
-            return next.handle(cloned);
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+        const newReq = req.clone({
+            headers: req.headers.set('Content-Type', 'application/json')
+        });
+
+        return next.handle(newReq).pipe(tap((res: HttpEvent<any>) => {
+            let token = localStorage.setItem('currentUser', JSON.stringify(res));
+            if (res instanceof HttpResponse) {
+                console.log('res', res);
+                res = res.clone({
+                });
+            }
+            return res;
+
+        }));
     }
-} 
+}

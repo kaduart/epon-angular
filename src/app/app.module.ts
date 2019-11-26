@@ -16,6 +16,7 @@ import { routes } from './routes';
 import { UserService } from './user/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptProviders } from './http-interceptor';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { httpInterceptProviders } from './http-interceptor';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService, httpInterceptProviders],
+  providers: [UserService, httpInterceptProviders, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

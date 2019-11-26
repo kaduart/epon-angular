@@ -14,27 +14,19 @@ export class UserService {
             username: user.username,
             password: user.password
         };
+
         return this.http.post(this.rootUrl + '/usuario-local', body);
     }
 
-    userAuthentication(user: User): Observable<User> {
+    userAuthentication(user: User): Observable<any> {
 
         const params = JSON.stringify( user );
-        console.log(user);
 
         const headers = new HttpHeaders();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
         headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Access-Control-Allow-Credentials', 'true');
 
-        return this.http.post<User>(this.rootUrl + '/login', params, { headers });
-        // const httpOptions = {
-        // headers: new HttpHeaders({ 'Content-Type': 'application/json',
-        //                            'Accept': 'application/json' })
-        // };
-
-        // return this.http
-        //     .post(this.rootUrl + '/login', params, httpOptions);
+        return this.http.post<User>(this.rootUrl + '/login', params, { headers, observe: 'response' });
     }
 }
