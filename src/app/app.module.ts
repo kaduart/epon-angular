@@ -17,6 +17,7 @@ import { UserService } from './user/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptProviders } from './http-interceptor';
 import { CookieService } from 'ngx-cookie-service';
+import {ProgressBarModule} from 'angular-progress-bar';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ProgressBarModule,
     RouterModule.forRoot(routes),
     FormsModule,
     HttpClientModule

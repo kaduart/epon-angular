@@ -1,24 +1,47 @@
-<div *ngIf="isLoginError" class="red-text center error-message">
-    <i class="material-icons">error</i>Incorrect username or password
+<div *ngIf="isLoginError" class="alert alert-danger" role="alert">
+    Usuário ou senha incorreto!
 </div>
-<form #loginForm="ngForm" class="col s12 white">
+<div class="container py-5">
+    <h3 class="mb-0 text-center">
+        <strong>Efetue o login!</strong>
+    </h3>
     <div class="row">
-        <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
-            <input type="text" [(ngModel)]="usuario.username" name="username" placeholder="Username">
-        </div>
-    </div>
+        <div class="col-md-12">
+            <h2 class="text-center mb-5"></h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formLogin"></span>
 
-    <div class="row">
-        <div class="input-field col s12">
-            <i class="material-icons prefix">vpn_key</i>
-            <input type="password" [(ngModel)]="usuario.password" name="password" placeholder="Password">
+                    <div class="card card-outline-secondary">
+                        <div class="card-body">
+                            <form class="loginForm" #loginForm="ngForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+                                
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" [(ngModel)]="usuario.username" class="form-control" name="username" id="username">
+                                    <div class="invalid-feedback">Please enter your username or email</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" [(ngModel)]="usuario.password" name="password" class="form-control" id="password" autocomplete="new-password">
+                                    <div class="invalid-feedback">Please enter a password</div>
+                                </div>
+                                <div class="form-check small">
+                                    <div class="">
+                                        Esqueceu senha ou login? <a href="">Clique aqui</a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg" id="btnLogin" (click)="fazerLogin()">Login</button>
+                                <div class="form-check small">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"> <span>Remember me on this computer</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="input-field col s12">
-            <button class="btn-large btn-submit" type="submit" (click)="fazerLogin()">Login</button>
-        </div>
-    </div>
-</form>
+</div>

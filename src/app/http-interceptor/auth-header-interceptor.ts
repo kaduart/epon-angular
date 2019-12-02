@@ -16,7 +16,7 @@ export class AuthHeaderInterceptor implements HttpInterceptor {
         });
 
         return next.handle(newReq).pipe(tap((res: HttpEvent<any>) => {
-            let token = localStorage.setItem('currentUser', JSON.stringify(res));
+            const token = localStorage.setItem('currentUser', JSON.stringify(res));
             if (res instanceof HttpResponse) {
                 console.log('res', res);
                 res = res.clone({
