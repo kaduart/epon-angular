@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import 'materialize-css';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +33,7 @@ import {ProgressBarModule} from 'angular-progress-bar';
     AppRoutingModule,
     ProgressBarModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule
   ],
