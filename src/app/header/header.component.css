@@ -1,0 +1,37 @@
+.navbar-header {
+    background-color: #3E5055;
+    width: 140%;
+    height: 61px;
+}
+ul {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    list-style:none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.btn-header {
+    text-decoration:none;
+    width: 88px;
+    height: 24px;
+    font: Regular 16px/21px Roboto;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.btn-header-active {
+    text-decoration:none;
+    padding-left: 40px;
+    padding-bottom: 9px;
+    padding-right: 40px;
+    padding-top: 7px;
+    height: 40px;
+    color: #FFFFFF;
+    border: 2px solid;
+    border-radius: 8px;
+    opacity: 1;
+}
