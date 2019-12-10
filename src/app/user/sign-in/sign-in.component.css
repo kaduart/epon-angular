@@ -1,10 +1,6 @@
 .container {
-    width: 122%;
-    padding-right: 19px;
-    padding-left: 43px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 133px;
+  margin: 1px 213px 138px 15px;
+    padding: 0;
 }
 
 .btn-lg {
@@ -56,7 +52,7 @@ label {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
     margin-right: -79px;
-    margin-left: -13px;
+    margin-left: -24px;
 }
 
 .card-body {

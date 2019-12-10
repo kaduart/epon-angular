@@ -1,0 +1,56 @@
+<h4 class="head text-center"><strong>{{title}}</strong></h4>
+<div class="card">
+    <div class="card-body">
+
+        <form #complementForm="ngForm" class="editForm" novalidate>
+            <div class="tab-pane active">
+                <br />
+                <div class='row'>
+                    <div class='col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10'>
+                        <div class="form-group">
+                            <label class="control-label" for="telefone">Telefone:</label>
+                            <input class="form-control input-md" #telefone="ngModel" required id="telefone" name="telefone" type="text" [(ngModel)]="complement.telefone">
+                            <!-- <div class="alert alert-danger" [hidden]="street.valid">Street Address is required</div> -->
+                        </div>
+                        <div class="row">
+                            <div class='col-xs-offset-1 col-xs-7 col-sm-offset-1 col-sm-3'>
+                                <div class="form-group">
+                                    <label class="control-label" for="cep">Cep:</label>
+                                    <input class="form-control input-md" #cep="ngModel" required id="cep" name="cep" type="text" [(ngModel)]="complement.cep">
+                                    <!-- <div class="alert alert-danger" [hidden]="cep.valid">cep is required</div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='col-xs-4 col-sm-offset-1 col-sm-3'>
+                            <div class="form-group">
+                                <label class="control-label" for="uf">UF:</label>
+                                <input class="form-control input-md" #uf="ngModel" required id="uf" name="uf" type="text" [(ngModel)]="complement.uf">
+                                <!-- <div class="alert alert-danger" [hidden]="uf.valid">uf is required</div> -->
+                            </div>
+                        </div>
+
+                        <div class='col-xs-12 col-sm-4'>
+                            <div class="form-group">
+                                <label class="control-label" for="cidade">Cidade:</label>
+                                <input class="form-control input-md" #cidade="ngModel" required id="cidade" name="cidade" type="text" [(ngModel)]="complement.cidade">
+                                <!-- <div class="alert alert-danger" [hidden]="cidade.valid">cidade is required</div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-outline-rounded btn-default" (click)="goToPrevious(complementForm)"> 
+                    <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+                        <button type="button" class="btn btn-outline-rounded btn-info" [disabled]="!complementForm.valid" (click)="goToNext(complementForm)"> Next 
+                    <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

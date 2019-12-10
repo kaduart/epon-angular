@@ -1,11 +1,12 @@
-.navbar{
+.navbar {
     background-color: #3E5055;
-    margin-right: -17px;
+    margin-right: -63px;
     height: 61px;
-    margin-left: 0px;
-    padding-left: 29px;
+    margin-left: -21px;
+    padding-left: 28px;
     margin-top: -8px;
 }
+
 .form-inline {
     display: flex;
     flex-flow: row wrap;
@@ -28,6 +29,17 @@
     border-color: #3E5055;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -7px;
+}
 
-
-
+.board {
+    box-sizing: border-box;
+    margin-bottom: 38px;
+    margin-top: 0px;
+}

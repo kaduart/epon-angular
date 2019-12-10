@@ -2,12 +2,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './user.model';
 import { Observable } from 'rxjs';
+import { FormDataService } from './sign-up/data/form-data.service';
 
 @Injectable()
 export class UserService {
     readonly rootUrl = 'http://localhost:8080';
 
     constructor(private http: HttpClient) { }
+
+    // cadastro(formDataService: FormDataService): Observable<any> {
+    //     return this.http.post(this.rootUrl + '/cadastro-local');
+    // }
 
     registerUser(user: User) {
         const body: User = {
