@@ -1,52 +1,60 @@
 <h4 class="head text-center"><strong>{{title}}</strong></h4>
-<div class="card">
-    <div class="card-body">
-        <form #personalForm="ngForm" class="editForm" id="msform" novalidate>
-            <div class="tab-pane active">
-                <br />
-                <div class="row">
-                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label" for="nome">Nome:</label>
-                                    <input class="form-control input-md" #nome="ngModel" required id="nome" name="nome" type="text" [(ngModel)]="personal.nome">
-                                    <!-- <div class="alert alert-danger" [hidden]="nome.valid">First Name is required</div> -->
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label" for="sobrenome">Sobrenome:</label>
-                                    <input class="form-control input-md" #sobrenome="ngModel" required id="sobrenome" name="sobrenome" type="text" [(ngModel)]="personal.sobrenome">
-                                    <!-- <div class="alert alert-danger" [hidden]="sobrenome.valid">Last Name is required</div> -->
+<div class="card-body">
+    <form #personalForm="ngForm" class="editForm" id="msform" novalidate>
+        <div class="tab-pane active">
+            <br />
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="nome">Nome:</label>
+                                <input class="form-control input-md" #nome="ngModel" required id="nome" name="nome" type="text" [(ngModel)]="personal.nome">
+                                <div class="alert alert-danger" [hidden]="nome.valid">*O campo nome é obrigatório.
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email">E-mail:</label>
-                            <input class="form-control input-md" #email="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="email" name="email" type="text" [(ngModel)]="personal.email">
-                            <!-- <div class="alert alert-danger" [hidden]="email.valid">Email is required and must be valid</div> -->
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="sobrenome">Sobrenome:</label>
+                                <input class="form-control input-md" #sobrenome="ngModel" required id="sobrenome" name="sobrenome" type="text" [(ngModel)]="personal.sobrenome">
+                                <div class="alert alert-danger" [hidden]="sobrenome.valid">*O campo sobrenome é obrigatório.
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="cemail">Confirme e-mail:</label>
-                            <input class="form-control input-md" #cemail="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="cemail" name="cemail" type="text" [(ngModel)]="personal.cemail">
-                            <!-- <div class="alert alert-danger" [hidden]="cemail.valid">Email is required and must be valid</div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="email">E-mail:</label>
+                                <input class="form-control input-md" #email="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="email" name="email" type="@gma" [(ngModel)]="personal.email">
+                                <div class="alert alert-danger" [hidden]="email.valid">*O campo email é obrigatório.
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cemail">Confirme e-mail:</label>
+                                <input class="form-control input-md" #cemail="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="cemail" name="cemail" type="text" [(ngModel)]="personal.cemail">
+                                <div class="alert alert-danger" [hidden]="cemail.valid">*É necessário confirmar o email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label" for="ealternativo">E-mail alternativo:</label>
+                                <input class="form-control input-md" #ealternativo="ngModel" pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="ealternativo" name="ealternativo" type="text" [(ngModel)]="personal.ealternativo">
+                                <!-- <div class="alert alert-danger" [hidden]="cemail.valid">Email is required and must be valid</div> -->
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label" for="ealternativo">E-mail alternativo:</label>
-                            <input class="form-control input-md" #ealternativo="ngModel" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$" id="ealternativo" name="ealternativo" type="text" [(ngModel)]="personal.ealternativo">
-                            <!-- <div class="alert alert-danger" [hidden]="cemail.valid">Email is required and must be valid</div> -->
-                        </div>
-
-                        <div class="form-group text-center">
-                            <button type="button" class="btn btn-success btn-outline-rounded btn-info  btn-lg" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)"> Próximo
-                                <span class="glyphicon glyphicon-arrow-right"></span>
-                            </button>
-                        </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-outline-rounded btn-info" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)"> Próximo
+                        </button>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatProgressBarModule} from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +8,9 @@ import {MatProgressBarModule} from '@angular/material';
 })
 export class NavbarComponent  {
 
+  constructor(public router: Router) {}
+
+  isLoginRoute() {
+    return this.router.url !== '/login';
+  }
 }

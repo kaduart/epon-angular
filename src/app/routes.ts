@@ -12,12 +12,10 @@ export const routes: Routes = [
     {
         path: 'signup', component: UserComponent,
         children: [
-            { path: '', component: PersonalComponent },
             { path: 'personal', component: PersonalComponent },
             { path: 'complement', component: ComplementComponent },
             { path: 'password', component: PasswordComponent },
             { path: 'finish', component: FinishComponent },
-            { path: '', redirectTo: '/personal', pathMatch: 'full' },
             { path: '**', component: PersonalComponent }
         ]
     },

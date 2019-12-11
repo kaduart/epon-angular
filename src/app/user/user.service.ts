@@ -10,7 +10,7 @@ export class UserService {
 
     constructor(private http: HttpClient) { }
 
-    // cadastro(formDataService: FormDataService): Observable<any> {
+    // cadastrarUsuario(formDataService: FormDataService): Observable<any> {
     //     return this.http.post(this.rootUrl + '/cadastro-local');
     // }
 
