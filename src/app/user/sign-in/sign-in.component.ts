@@ -12,9 +12,10 @@ import { User } from '../user.model';
 
 export class SignInComponent implements OnInit {
 
+  title = 'Crie uma senha!';
   usuario: User = new User();
 
-  isLoginError: boolean = false;
+  isLoginError = false;
   constructor( private userService: UserService,
                private router: Router ) { }
 
