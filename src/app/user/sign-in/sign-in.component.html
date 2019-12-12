@@ -14,16 +14,16 @@
 
                     <div class="card card-outline-secondary">
                         <div class="card-body">
-                            <form class="loginForm" #loginForm="ngForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+                            <form class="loginForm" [formGroup]="loginForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
                                 
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" [(ngModel)]="usuario.username" class="form-control" name="username" id="username">
+                                    <input type="text" class="form-control" formControlName="username" name="username" placeholder="Username" id="username">
                                     <div class="invalid-feedback">Please enter your username or email</div>
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" [(ngModel)]="usuario.password" name="password" class="form-control" id="password" autocomplete="new-password">
+                                    <input type="password" formControlName="password" name="password" placeholder="Password" class="form-control" id="password" autocomplete="new-password">
                                     <div class="invalid-feedback">Please enter a password</div>
                                 </div>
                                 <div class="form-check small">
