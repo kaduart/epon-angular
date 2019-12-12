@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormDataService } from './sign-up/data/form-data.service';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  title = 'EPON';
+  @Input() formData;
 
-  constructor() { }
+  constructor(private formDataService: FormDataService) { }
 
   ngOnInit() {
+    this.formData = this.formDataService.getFormData();
+    console.log(this.title + 'loaded!');
   }
 
 }

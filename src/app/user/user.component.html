@@ -1,11 +1,25 @@
 <nav class="navbar justify-content-between">
-        <form class="form-inline">
-            <button class="btn btn-outline-light my-2 my-sm-0" routerLink='/login' routerLinkActive='active'>Login</button>
-            <button class="btn btn-outline-light my-2 my-sm-0" routerLink='/signup' routerLinkActive='active'>Efetuar login</button>
-        </form>
+    <form class="form-inline">
+        <button class="btn btn-outline-light my-2 my-sm-0" routerLink='/login' routerLinkActive='active'>Login</button>
+        <button class="btn btn-outline-light my-2 my-sm-0" routerLink='/signup/personal' routerLinkActive='active'>Efetuar login</button>
+    </form>
 </nav>
-    <div class="card-content">
-        <div class="row">
-            <router-outlet></router-outlet>
+
+<section class="tela" style="background:#F6F6F6;">
+    <div class="container">
+        <div class="board">
+            <!-- Navigation Area (Circular Tabs) -->
+            <app-navbar></app-navbar>
+            <!-- End Navigation Area (Circular Tabs) -->
+
+            <!-- Content Area -->
+            <div class="tab-content">
+                <!-- Routed view  -->
+                <router-outlet></router-outlet>
+            </div>
+            <!-- End Content Area -->
         </div>
+
+        <!-- <pre>{{ formData | json }}</pre> -->
     </div>
+</section>

@@ -18,6 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptProviders } from './http-interceptor';
 import { CookieService } from 'ngx-cookie-service';
 import {ProgressBarModule} from 'angular-progress-bar';
+import { PersonalComponent } from './user/sign-up/personal/personal.component';
+import { ComplementComponent } from './user/sign-up/complement/complement.component';
+import { NavbarComponent } from './user/sign-up/navbar/navbar.component';
+import { FormDataService } from './user/sign-up/data/form-data.service';
+import { PasswordComponent } from './user/sign-up/password/password.component';
+import { FinishComponent } from './user/sign-up/finish/finish.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,12 @@ import {ProgressBarModule} from 'angular-progress-bar';
     SignUpComponent,
     SignInComponent,
     HomeComponent,
-    SharedComponent
+    SharedComponent,
+    PersonalComponent,
+    ComplementComponent,
+    NavbarComponent,
+    PasswordComponent,
+    FinishComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +48,7 @@ import {ProgressBarModule} from 'angular-progress-bar';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService, httpInterceptProviders, CookieService],
+  providers: [UserService, httpInterceptProviders, CookieService, { provide: FormDataService, useClass: FormDataService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

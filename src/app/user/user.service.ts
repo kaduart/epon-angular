@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './user.model';
 import { Observable } from 'rxjs';
+import { FormDataService } from './sign-up/data/form-data.service';
 
 
 
@@ -17,15 +18,11 @@ export class UserService {
     
 
     constructor(private http: HttpClient) { }
-
-    // registerUser(user: User) {
-    //     const body: User = {
-    //         username: user.username,
-    //         password: user.password
-    //     };
-
-    //     return this.http.post(this.rootUrl + '/usuario-local', body);
-    // }
+    registerUser(user: User) {
+        const body: User = {
+            username: user.username,
+            password: user.password
+        };
 
     login(username: string, password: string): Observable<any> {
         const headers = new HttpHeaders();
