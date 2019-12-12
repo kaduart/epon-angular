@@ -13,15 +13,9 @@ import { Router } from '@angular/router';
 
 export class SignInComponent implements OnInit {
 
-<<<<<<< HEAD
-  title = 'Crie uma senha!';
-  usuario: User = new User();
 
-  isLoginError = false;
-=======
-  loginForm: FormGroup
-  
->>>>>>> 3d1cc344241ff59c448f0d3402de90478d4518d1
+  loginForm: FormGroup;
+
   constructor( private userService: UserService,
                private fb: FormBuilder,
                private router: Router ) { }
