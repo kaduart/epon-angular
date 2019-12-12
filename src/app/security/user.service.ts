@@ -23,6 +23,7 @@ export class UserService {
             username: user.username,
             password: user.password
         };
+    }
 
     login(username: string, password: string): Observable<any> {
         const headers = new HttpHeaders();
@@ -37,4 +38,5 @@ export class UserService {
         headers.append('Content-Type', 'application/json');
         return this.http.get(`${SIG_EPON_API}/grupo`)
     }
+
 }

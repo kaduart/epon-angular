@@ -1,19 +1,18 @@
 import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
-import { SignUpComponent } from './security/sign-up/sign-up.component';
-import { SignInComponent } from './user/sign-in/sign-in.component';
-import { UserComponent } from './user/user.component';
-import { PersonalComponent } from './user/sign-up/personal/personal.component';
-import { ComplementComponent } from './user/sign-up/complement/complement.component';
-import { PasswordComponent } from './user/sign-up/password/password.component';
-import { FinishComponent } from './user/sign-up/finish/finish.component';
-import { HeaderComponent } from './header/header.component'
+import { SignInComponent } from './security/sign-in/sign-in.component';
+import {SignUpComponent} from './security/sign-up/sign-up.component';
+import { PersonalComponent } from './security//sign-up/personal/personal.component';
+import { ComplementComponent } from './security/sign-up/complement/complement.component';
+import { PasswordComponent } from './security/sign-up/password/password.component';
+import { FinishComponent } from './security/sign-up/finish/finish.component';
+
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'login', component: SignInComponent},
     {
-        path: 'signup', component: UserComponent,
+        path: 'signup', component: SignUpComponent,
         children: [
             { path: 'personal', component: PersonalComponent },
             { path: 'complement', component: ComplementComponent },
