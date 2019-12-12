@@ -18,13 +18,15 @@ export class SignInComponent implements OnInit {
 
   constructor( private userService: UserService,
                private fb: FormBuilder,
-               private router: Router ) { }
+               private router: Router ) { 
+                this.loginForm = this.fb.group({
+                  username: ['', Validators.required],
+                  password: ['', Validators.required],
+                })
+              }
 
   ngOnInit() {
-    this.loginForm = this.fb.group({
-      username: this.fb.control('', [Validators.required]),
-      password: this.fb.control('', [Validators.required]),
-    })
+    
   }
 
   fazerLogin( ) {
