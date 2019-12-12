@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import 'materialize-css';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -44,6 +44,7 @@ import { FinishComponent } from './user/sign-up/finish/finish.component';
     AppRoutingModule,
     ProgressBarModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule
   ],
