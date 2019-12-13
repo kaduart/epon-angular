@@ -1,5 +1,5 @@
 .container {
-    width: 122%;
+    width: 100%;
     padding-right: 19px;
     padding-left: 43px;
     margin-right: auto;
@@ -76,7 +76,7 @@ label {
     margin-right: -69px;
 }
 
-.conatiner-header-login{
+.container-header-login{
     left: 77px;
     width: 206px;
     height: 43px;
