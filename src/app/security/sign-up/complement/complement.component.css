@@ -1,3 +1,10 @@
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin: -5%;
+    margin-top: -21px;
+}
+
 .form-control:focus {
     border-color: #4FC95D;
     outline: 0;
@@ -63,35 +70,26 @@
     margin-top: 19px;
 }
 
-.card-body {
-    flex: 1 1 auto;
-    padding: 1.25rem;
-    margin-bottom: -6px;
-    margin-top: -36px;
-    margin-left: -36px;
-    margin-right: -9px;
-}
-
 label {
     display: inline-block;
     margin-bottom: -3.5rem;
 }
 
 .head {
-    margin-top: -20px;
+    margin-top: 51px;
     font-size: 26px;
 }
 
 .form-group {
     margin-bottom: 1rem;
-    margin-right: -17px;
-    margin-left: -16px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 4px;
 }
 
 .row {
-    margin-right: -5px;
-    margin-left: -22px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .col-xs-4 {
@@ -113,8 +111,6 @@ label {
 }
 
 .col-xs-offset-1 {
-    margin-left: 54px;
-    padding-right: 2px;
     margin-top: 14px;
 }
 

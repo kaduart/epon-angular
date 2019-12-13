@@ -1,7 +1,4 @@
 @media (min-width: 360px) {
-    .container {
-        max-width: 782px;
-    }
     .navbar {
         background-color: #3E5055;
         margin-right: -63px;
@@ -34,8 +31,8 @@
     }
     .container {
         width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: 1px;
+        padding-left: 10px;
         margin-right: auto;
         margin-left: auto;
         margin-top: -2px;
