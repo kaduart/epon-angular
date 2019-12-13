@@ -1,151 +1,274 @@
-* {
-    margin: 0 -31px 19px 4px;
-    padding: 1px 24px 0px 0px;
-    font-size: 10px;
-    margin-top: 8px;
+/* Telefones em paisagem e abaixo */
+
+@media (min-width: 360px) {
+    * {
+        margin: 0 -31px 19px 4px;
+        padding: 1px 24px 0px 0px;
+        font-size: 10px;
+        margin-top: 8px;
+    }
+    html {
+        height: 100%
+    }
+    p {
+        color: grey
+    }
+    #heading {
+        text-transform: uppercase;
+        color: #4FC95D;
+        font-weight: normal;
+        margin: 0 -84px 0 -99px;
+    }
+    .card {
+        z-index: 0;
+        border: none;
+        position: relative;
+        margin-left: 57px;
+        margin-right: 21px;
+        background-color: #F6F6F6;
+    }
+    .steps {
+        font-size: 25px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: right
+    }
+    #mytab #personal strong {
+        margin-left: 15px;
+    }
+    #mytab #complement strong {
+        margin-left: 1px;
+    }
+    #mytab #password strong {
+        margin-left: 19px;
+    }
+    #mytab #finalizar strong {
+        margin-left: 15px;
+    }
+    .round-tabs {
+        padding-right: 9px;
+        margin-right: 25px;
+    }
+    .fit-image {
+        width: 100%;
+        object-fit: cover
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -61px;
+        margin-left: 79px;
+    }
+    #status-buttons a.active span.round-tabs {
+        background: #4FC95D;
+        color: #ffffff;
+        margin-left: -1px;
+    }
+    span.round-tabs {
+        color: #ffffff;
+        border-bottom-color: transparent;
+        border: 2px solid #F6F6F6;
+        width: 35px;
+        height: 35px;
+        line-height: 39px;
+        display: inline-block;
+        border-radius: 100px;
+        background: #D1D1D1;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        font-size: 25px;
+        margin-top: -12px;
+        margin-left: -1px;
+    }
+    .glyphicon {
+        position: absolute;
+        top: 2px;
+        margin-left: 11px;
+    }
+    .nav-tabs {
+        border-bottom: 0px solid #ddd;
+        margin-top: -32px;
+        padding-right: initial;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: -29px;
+        padding-right: initial;
+        width: 90%;
+    }
+    .nav-tabs>li {
+        float: left;
+        margin-bottom: -1px;
+        padding-right: 22px;
+    }
+    .nav-tabs>li a:hover {
+        background: transparent;
+    }
+    .nav-tabs>li a {
+        margin-right: 35px;
+        margin-left: 15px;
+        width: 35px;
+        height: 34px;
+        line-height: 50px;
+        border-radius: 35px 36px;
+        margin-bottom: 8px;
+    }
+    .round-tabs {
+        padding-right: 32px;
+        margin-right: 0px;
+        margin-left: -8px;
+    }
+    .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 228px;
+        margin: -186px auto;
+        left: -5px;
+        right: 0;
+        top: 45%;
+        z-index: 1;
+    }
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
 }
 
-html {
-    height: 100%
-}
 
-p {
-    color: grey
-}
+/* Telefones em paisagem a tablet em retrato */
 
-#heading {
-    text-transform: uppercase;
-    color: #4FC95D;
-    font-weight: normal;
-    margin: 0 -84px 0 -99px;
-}
-
-.card {
-    z-index: 0;
-    border: none;
-    position: relative;
-    margin-left: 57px;
-    margin-right: 21px;
-    background-color: #F6F6F6;
-}
-
-.steps {
-    font-size: 25px;
-    color: gray;
-    margin-bottom: 10px;
-    font-weight: normal;
-    text-align: right
-}
-
-#mytab #personal strong {
-    margin-left: 15px;
-}
-
-#mytab #complement strong {
-    margin-left: 1px;
-}
-
-#mytab #password strong {
-    margin-left: 19px;
-}
-
-#mytab #finalizar strong {
-    margin-left: 15px;
-}
-
-.round-tabs {
-    padding-right: 9px;
-    margin-right: 25px;
-}
-
-.fit-image {
-    width: 100%;
-    object-fit: cover
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -61px;
-    margin-left: 79px;
-}
-
-#status-buttons a.active span.round-tabs {
-    background: #4FC95D;
-    color: #ffffff;
-    margin-left: -1px;
-}
-
-span.round-tabs {
-    color: #ffffff;
-    border-bottom-color: transparent;
-    border: 2px solid #F6F6F6;
-    width: 35px;
-    height: 35px;
-    line-height: 39px;
-    display: inline-block;
-    border-radius: 100px;
-    background: #D1D1D1;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
-    margin-top: -12px;
-    margin-left: -1px;
-}
-
-.glyphicon {
-    position: absolute;
-    top: 2px;
-    margin-left: 11px;
-}
-
-.nav-tabs {
-    border-bottom: 0px solid #ddd;
-    margin-right: 0px;
-    margin-left: -11px;
-    padding-right: initial;
-}
-
-.nav-tabs>li {
-    float: left;
-    margin-bottom: -1px;
-    padding-left: 4px;
-}
-
-.nav-tabs>li a:hover {
-    background: transparent;
-}
-
-.nav-tabs>li a {
-    margin-right: 35px;
-    margin-left: 15px;
-    width: 35px;
-    height: 34px;
-    line-height: 50px;
-    border-radius: 35px 36px;
-    margin-bottom: 8px;
-}
-
-.round-tabs {
-    padding-right: 32px;
-    margin-right: 0px;
-    margin-left: -8px;
-}
-
-.liner {
-    height: 2px;
-    background: #ddd;
-    position: absolute;
-    width: 59%;
-    margin: -186px auto;
-    left: -5px;
-    right: 0;
-    top: 45%;
-    z-index: 1;
-}
-
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
+@media (min-width: 768px) {
+    * {
+        margin: 0 -31px 19px 4px;
+        padding: 1px 24px 0px 0px;
+        font-size: 10px;
+        margin-top: 8px;
+    }
+    html {
+        height: 100%
+    }
+    p {
+        color: grey
+    }
+    #heading {
+        text-transform: uppercase;
+        color: #4FC95D;
+        font-weight: normal;
+        margin: 0 -84px 0 -99px;
+    }
+    .card {
+        z-index: 0;
+        border: none;
+        position: relative;
+        margin-left: 57px;
+        margin-right: 21px;
+        background-color: #F6F6F6;
+    }
+    .steps {
+        font-size: 25px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: right
+    }
+    #mytab #personal strong {
+        margin-left: 15px;
+    }
+    #mytab #complement strong {
+        margin-left: 1px;
+    }
+    #mytab #password strong {
+        margin-left: 19px;
+    }
+    #mytab #finalizar strong {
+        margin-left: 15px;
+    }
+    .round-tabs {
+        padding-right: 9px;
+        margin-right: 25px;
+    }
+    .fit-image {
+        width: 100%;
+        object-fit: cover
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -61px;
+        margin-left: 79px;
+    }
+    #status-buttons a.active span.round-tabs {
+        background: #4FC95D;
+        color: #ffffff;
+        margin-left: -1px;
+    }
+    span.round-tabs {
+        color: #ffffff;
+        border-bottom-color: transparent;
+        border: 2px solid #F6F6F6;
+        width: 35px;
+        height: 35px;
+        line-height: 39px;
+        display: inline-block;
+        border-radius: 100px;
+        background: #D1D1D1;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        font-size: 25px;
+        margin-top: -12px;
+        margin-left: -1px;
+    }
+    .glyphicon {
+        position: absolute;
+        top: 2px;
+        margin-left: 11px;
+    }
+    .nav-tabs {
+        border-bottom: 0px solid #ddd;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: -29px;
+        padding-right: initial;
+        width: 50%;
+    }
+    .nav-tabs>li {
+        float: left;
+        margin-bottom: -1px;
+        padding-left: 4px;
+    }
+    .nav-tabs>li a:hover {
+        background: transparent;
+    }
+    .nav-tabs>li a {
+        margin-right: 35px;
+        margin-left: 15px;
+        width: 35px;
+        height: 34px;
+        line-height: 50px;
+        border-radius: 35px 36px;
+        margin-bottom: 8px;
+    }
+    .round-tabs {
+        padding-right: 32px;
+        margin-right: 0px;
+        margin-left: -8px;
+    }
+    .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 228px;
+        margin: -186px auto;
+        left: -5px;
+        right: 0;
+        top: 29%;
+        z-index: 1;
+    }
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
 }
