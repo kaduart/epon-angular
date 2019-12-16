@@ -1,11 +1,7 @@
-.navbar-header {
-    height: 61px;
-}
-
 ul {
     position: absolute;
     top: 20px;
-    right: -10px;
+    right: 15px;
     list-style: none;
 }
 
@@ -35,4 +31,10 @@ ul li {
     border: 2px solid;
     border-radius: 8px;
     opacity: 1;
+}
+
+@media(min-width: 766px){
+    ul {
+        right: 21px;
+    }
 }

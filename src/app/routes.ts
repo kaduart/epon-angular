@@ -9,8 +9,8 @@ import { FinishComponent } from './security/sign-up/finish/finish.component';
 
 
 export const routes: Routes = [
-    {path: 'home', component: HomeComponent},
     {path: 'login', component: SignInComponent},
+    {path: 'home', component: HomeComponent},
     {
         path: 'signup', component: SignUpComponent,
         children: [
