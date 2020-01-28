@@ -6,11 +6,13 @@ import { PersonalComponent } from './security//sign-up/personal/personal.compone
 import { ComplementComponent } from './security/sign-up/complement/complement.component';
 import { PasswordComponent } from './security/sign-up/password/password.component';
 import { FinishComponent } from './security/sign-up/finish/finish.component';
+import { EquipamentoComponent } from './equipamento/equipamento/equipamento.component';
 
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'login', component: SignInComponent},
+    {path: 'equipamento', component: EquipamentoComponent },
     {
         path: 'signup', component: SignUpComponent,
         children: [

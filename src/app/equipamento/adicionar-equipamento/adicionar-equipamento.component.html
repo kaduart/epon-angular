@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input class="form-control" id="nome" [(ngModel)]="equipamento.nome" type="text">
+  </div>
+  <div class="form-group">
+    <label for="ip">IP</label>
+    <input class="form-control" id="ip" [(ngModel)]="equipamento.ip" type="text">
+  </div>
+  <button (click)="salvarEquipamento()">Salvar Equipamento</button>
+</div>
