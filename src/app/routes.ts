@@ -10,9 +10,9 @@ import { EquipamentoComponent } from './equipamento/equipamento/equipamento.comp
 
 
 export const routes: Routes = [
-    {path: 'home', component: HomeComponent},
     {path: 'login', component: SignInComponent},
     {path: 'equipamento', component: EquipamentoComponent },
+    {path: 'home', component: HomeComponent},
     {
         path: 'signup', component: SignUpComponent,
         children: [

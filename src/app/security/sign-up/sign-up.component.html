@@ -1,18 +1,15 @@
 <section class="tela" style="background:#F6F6F6;">
     <div class="container">
-        <div class="board">
-            <!-- Navigation Area (Circular Tabs) -->
-            <app-navbar></app-navbar>
-            <!-- End Navigation Area (Circular Tabs) -->
+        <!-- Navigation Area (Circular Tabs) -->
+        <app-navbar></app-navbar>
+        <!-- End Navigation Area (Circular Tabs) -->
 
-            <!-- Content Area -->
-            <div class="tab-content">
-                <!-- Routed view  -->
-                <router-outlet></router-outlet>
-            </div>
-            <!-- End Content Area -->
+        <!-- Content Area -->
+        <div class="tab-content">
+            <!-- Routed view  -->
+            <router-outlet></router-outlet>
         </div>
-
+        <!-- End Content Area -->
         <!-- <pre>{{ formData | json }}</pre> -->
     </div>
 </section>

@@ -1,7 +1,15 @@
+@font-face{
+    font-family: "Roboto";
+    src: url('../../../assets/fonts/roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+@font-face{
+    font-family: "Segoe UI";
+    src: url('../../../assets/fonts/segoe-ui.otf');
+}
 .container {
-    width: 122%;
-    padding-right: 19px;
-    padding-left: 43px;
+    width: 100%;
+    padding: 0;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 133px;
@@ -76,7 +84,7 @@ label {
     margin-right: -69px;
 }
 
-.conatiner-header-login{
+.container-header-login{
     left: 77px;
     width: 206px;
     height: 43px;
@@ -88,8 +96,8 @@ label {
     opacity: 1;
 
     margin-top: 96px;
-    margin-left: 77px;
-    margin-right: 77px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-login {
@@ -97,8 +105,8 @@ label {
     width: 291px;
     height: 340px;
     opacity: 1;
-    margin-left: 35px;
-    margin-right: 34px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 137px;
     margin-top: 77px;
 }
@@ -132,7 +140,7 @@ label {
     height: 49px;
 
     text-align: center;
-    font: Regular 21px Segoe UI;
+    font: 16px/21px Segoe UI;
     letter-spacing: 0;
     color: #333333;
     opacity: 1;
@@ -150,14 +158,74 @@ label {
 }
 .checkbox-label {
     text-align: center;
-    font: Regular 16px/21px Segoe UI;
+    font: 16px/21px Segoe UI;
     letter-spacing: 0;
     color: #d1d1d1;
     opacity: 1;
 }
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (min-width: 1023px) {
-    
+@media(min-width: 766px){
+    form {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-header-login{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-login {
+        left: 35px;
+        width: 539px;
+        height: 378px;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 137px;
+        margin-top: 77px;
+        box-shadow: 0px 3px 6px #00000029;
+        border: 3px solid #D1D1D1;
+        border-radius: 12px;
+    }
+    .form-group { 
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-group label { 
+        margin-bottom: 0px;
+    }
+
+    .form-input {
+        width: 490px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-principal {
+        width: 490px;
+    }
+
+    .form-reset-password {
+        display: block;
+        float: left;
+        clear: both;
+        margin-bottom: 20px;
+        margin-left: -220px;
+        width: 275px;
+        height: 25px;
+        text-align: left;
+    }
+    .checkbox-login {
+        margin-left: -260px;
+        margin-top: 20px;
+    }
 }
 
 /* On screens that are 992px or less, set the background color to blue */
