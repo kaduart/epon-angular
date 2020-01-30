@@ -20,6 +20,9 @@ import { FormDataService } from './security/sign-up/data/form-data.service';
 import { PasswordComponent } from './security/sign-up/password/password.component';
 import { FinishComponent } from './security/sign-up/finish/finish.component';
 import { HeaderComponent } from './header/header.component';
+import { EquipamentoComponent } from './equipamento/equipamento/equipamento.component';
+import { AdicionarEquipamentoComponent } from './equipamento/adicionar-equipamento/adicionar-equipamento.component';
+import { ListarEquipamentoComponent } from './equipamento/listar-equipamento/listar-equipamento.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { HeaderComponent } from './header/header.component';
     NavbarComponent,
     PasswordComponent,
     FinishComponent,
-    HeaderComponent
+    HeaderComponent,
+    EquipamentoComponent,
+    AdicionarEquipamentoComponent,
+    ListarEquipamentoComponent
   ],
   imports: [
     BrowserModule,
