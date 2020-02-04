@@ -13,16 +13,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptProviders } from './http-interceptor';
 import { CookieService } from 'ngx-cookie-service';
 import {ProgressBarModule} from 'angular-progress-bar';
-import { PersonalComponent } from './security/sign-up/personal/personal.component';
-import { ComplementComponent } from './security/sign-up/complement/complement.component';
-import { NavbarComponent } from './security/sign-up/navbar/navbar.component';
-import { FormDataService } from './security/sign-up/data/form-data.service';
-import { PasswordComponent } from './security/sign-up/password/password.component';
-import { FinishComponent } from './security/sign-up/finish/finish.component';
+// import { PersonalComponent } from './security/sign-up/personal/personal.component';
+// import { ComplementComponent } from './security/sign-up/complement/complement.component';
+// import { NavbarComponent } from './security/sign-up/navbar/navbar.component';
+// import { FormDataService } from './security/sign-up/data/form-data.service';
+// import { PasswordComponent } from './security/sign-up/password/password.component';
+// import { FinishComponent } from './security/sign-up/finish/finish.component';
 import { HeaderComponent } from './header/header.component';
 import { EquipamentoComponent } from './equipamento/equipamento/equipamento.component';
 import { AdicionarEquipamentoComponent } from './equipamento/adicionar-equipamento/adicionar-equipamento.component';
 import { ListarEquipamentoComponent } from './equipamento/listar-equipamento/listar-equipamento.component';
+import { CadastroPessoalComponent } from './security/sign-up/cadastro-pessoal/cadastro-pessoal.component';
+import { CadastroComplementarComponent } from './security/sign-up/cadastro-complementar/cadastro-complementar.component';
+import { CadastroSenhaComponent } from './security/sign-up/cadastro-senha/cadastro-senha.component';
+import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cadastro/verificacao-cadastro.component';
 
 
 @NgModule({
@@ -32,15 +36,19 @@ import { ListarEquipamentoComponent } from './equipamento/listar-equipamento/lis
     SignInComponent,
     HomeComponent,
     SharedComponent,
-    PersonalComponent,
-    ComplementComponent,
-    NavbarComponent,
-    PasswordComponent,
-    FinishComponent,
+    // PersonalComponent,
+    // ComplementComponent,
+    // NavbarComponent,
+    // PasswordComponent,
+    // FinishComponent,
     HeaderComponent,
     EquipamentoComponent,
     AdicionarEquipamentoComponent,
-    ListarEquipamentoComponent
+    ListarEquipamentoComponent,
+    CadastroPessoalComponent,
+    CadastroComplementarComponent,
+    CadastroSenhaComponent,
+    VerificacaoCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +58,9 @@ import { ListarEquipamentoComponent } from './equipamento/listar-equipamento/lis
     FormsModule,
     HttpClientModule
   ],
-  exports: [RouterModule], 
-  providers: [UserService, httpInterceptProviders, CookieService, { provide: FormDataService, useClass: FormDataService }],
+  exports: [RouterModule],
+  providers: [UserService, httpInterceptProviders, CookieService],
+  // providers: [UserService, httpInterceptProviders, CookieService, { provide: FormDataService, useClass: FormDataService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

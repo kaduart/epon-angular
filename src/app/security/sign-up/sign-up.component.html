@@ -1,15 +1,61 @@
-<section class="tela" style="background:#F6F6F6;">
+<main>
+  <header>
+      <app-header></app-header>
+  </header>
+  <section>
     <div class="container">
-        <!-- Navigation Area (Circular Tabs) -->
-        <app-navbar></app-navbar>
-        <!-- End Navigation Area (Circular Tabs) -->
-
-        <!-- Content Area -->
-        <div class="tab-content">
-            <!-- Routed view  -->
-            <router-outlet></router-outlet>
-        </div>
-        <!-- End Content Area -->
-        <!-- <pre>{{ formData | json }}</pre> -->
+      <nav class="navbar-progress">
+        <ul>
+          <li>
+            <a routerLink="/signup/cadastroPessoal" routerLinkActive="circle-active">
+              <svg class="circle-progress">
+                <circle [class.circle-active]="this.opcaoTela == 0"
+                        [class.circle-check]="this.opcaoTela > 0" cx="10" cy="10" r="10" />
+              </svg>
+              <svg class="rect-progress">
+                <rect class="rect" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/signup/cadastroComplementar">
+              <svg class="circle-progress">
+                <circle [class.circle-default]="this.opcaoTela == 0"
+                        [class.circle-active]="this.opcaoTela == 1"
+                        [class.circle-check]="this.opcaoTela > 1" cx="10" cy="10" r="10" />
+              </svg>
+              <svg class="rect-progress">
+                <rect class="rect" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/signup/cadastroSenha">
+              <svg class="circle-progress">
+                <circle [class.circle-default]="this.opcaoTela <= 2"
+                        [class.circle-active]="this.opcaoTela == 2"
+                        [class.circle-check]="this.opcaoTela > 2" cx="10" cy="10" r="10" />
+              </svg>
+              <svg class="rect-progress">
+                <rect class="rect" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/signup/verficacaoCadastro">
+              <svg class="circle-progress">
+                <circle [class.circle-default]="this.opcaoTela <= 3"
+                        [class.circle-active]="this.opcaoTela == 3" cx="10" cy="10" r="10" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
     </div>
-</section>
+  </section>
+  <footer></footer>
+</main>
+
