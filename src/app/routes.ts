@@ -7,6 +7,7 @@ import { CadastroPessoalComponent } from './security/sign-up/cadastro-pessoal/ca
 import { CadastroComplementarComponent } from './security/sign-up/cadastro-complementar/cadastro-complementar.component';
 import { CadastroSenhaComponent } from './security/sign-up/cadastro-senha/cadastro-senha.component';
 import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cadastro/verificacao-cadastro.component';
+import { PerfilComponent } from './perfil/perfil/perfil.component';
 
 
 export const routes: Routes = [
@@ -22,4 +23,5 @@ export const routes: Routes = [
              { path: 'verficacaoCadastro', component: VerificacaoCadastroComponent },
         ]
     },
+    {path: '**', component: PerfilComponent}
 ];

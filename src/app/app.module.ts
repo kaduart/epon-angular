@@ -27,6 +27,7 @@ import { CadastroPessoalComponent } from './security/sign-up/cadastro-pessoal/ca
 import { CadastroComplementarComponent } from './security/sign-up/cadastro-complementar/cadastro-complementar.component';
 import { CadastroSenhaComponent } from './security/sign-up/cadastro-senha/cadastro-senha.component';
 import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cadastro/verificacao-cadastro.component';
+import { PerfilComponent } from './perfil/perfil/perfil.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cad
     CadastroPessoalComponent,
     CadastroComplementarComponent,
     CadastroSenhaComponent,
-    VerificacaoCadastroComponent
+    VerificacaoCadastroComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
