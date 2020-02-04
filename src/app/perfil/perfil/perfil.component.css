@@ -1,3 +1,10 @@
+.cabecalho-perfil{
+  border-bottom: 0.5px solid black;
+}
+.barra-lateral-perfil{
+  border-right: 50px solid #252526;
+}
+
 .dados-perfil {
   background-color: black;
   grid-area: conteudo;
