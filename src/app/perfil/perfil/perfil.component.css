@@ -4,6 +4,8 @@
 }
 .barra-lateral-perfil {
   border-right: 50px solid #252526;
+  color: white;
+  padding: 0 40px 0 40px;
 }
 .botao-esquizofrenico {
   background-color: rgb(0,0,0,0);

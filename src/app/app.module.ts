@@ -28,6 +28,9 @@ import { CadastroComplementarComponent } from './security/sign-up/cadastro-compl
 import { CadastroSenhaComponent } from './security/sign-up/cadastro-senha/cadastro-senha.component';
 import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cadastro/verificacao-cadastro.component';
 import { PerfilComponent } from './perfil/perfil/perfil.component';
+import { DescricaoPerfilComponent } from './perfil/descricao-perfil/descricao-perfil.component';
+import { LinksPerfilComponent } from './perfil/links-perfil/links-perfil.component';
+import { SairPerfilComponent } from './perfil/sair-perfil/sair-perfil.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { PerfilComponent } from './perfil/perfil/perfil.component';
     CadastroComplementarComponent,
     CadastroSenhaComponent,
     VerificacaoCadastroComponent,
-    PerfilComponent
+    PerfilComponent,
+    DescricaoPerfilComponent,
+    LinksPerfilComponent,
+    SairPerfilComponent
   ],
   imports: [
     BrowserModule,
