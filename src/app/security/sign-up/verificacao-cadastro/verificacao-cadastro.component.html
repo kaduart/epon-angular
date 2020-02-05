@@ -1,0 +1,19 @@
+<div class="container-header-login">
+  <h3 class="text-header3">
+      <strong>Verifique  o código!</strong>
+  </h3>
+</div>
+<div class="container-cadastro">
+  <form class="senhaForm" [formGroup]="verificacaoCodigoForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+      <div class="verificacao-text-1">
+          <p>Para finalizar insira o código de 4 dígitos enviando para o e-mail <a href="#">{{this.userService.user.email}}</a></p>
+      </div>
+      <div class="form-group">
+          <input type="text" formControlName="codigo" name="codigo" placeholder="Código" class="form-input" id="codigo">
+      </div>
+      <div class="verificacao-text-2">
+          <p>Ao inserir o código de confirmação e clicar em finalizar cadastro, você concorda com nossos <a href="#">Termos</a>, <a href="#">Política de Dados</a> e <a href="#">Política de Cookies</a>.</p>
+      </div>
+      <button type="submit" class="btn-principal" id="btnLogin" (click)="finalizarCadastro()">Finalizar Cadastro</button>
+  </form>
+</div>

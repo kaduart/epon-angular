@@ -1,0 +1,29 @@
+<div class="container-header-login">
+  <h3 class="text-header3">
+      <strong>Crie uma conta!</strong>
+  </h3>
+</div>
+<div class="container-cadastro">
+  <form class="loginCadastro" [formGroup]="cadastroPessoalForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+    <div class="form-group-fullname">
+          <input type="text" id="form-input-nome" class="form-input-fullname" formControlName="nome" name="nome" placeholder="Nome">
+          <input type="text" id="form-input-sobrenome" class="form-input-fullname" formControlName="sobrenome" name="sobrenome" placeholder="Sobrenome">
+      </div>
+      <div class="form-group">
+          <input type="email" formControlName="email" name="email" placeholder="Email" class="form-input" id="email">
+      </div>
+      <div class="form-group">
+          <input type="email" formControlName="confirmarEmail" name="confirmarEmail" placeholder="Confirme email" class="form-input" id="confirmarEmail">
+      </div>
+      <div class="form-group">
+          <input type="email" formControlName="emailAlternativo" name="emailAlternativo" placeholder="Email alternativo" class="form-input" id="emailAlternativo">
+      </div>
+
+      <button type="submit" class="btn-principal" id="btnLogin" (click)="efetuarCadastroPessoal()" >Próximo</button>
+      <div class="checkbox-login">
+          <label class="checkbox-label">
+              <input type="checkbox" formControlName="checkAtualizacoes" name="checkAtualizacoes" id="checkAtualizacoes" class="checkbox-input"> <span>Aceito receber por e-mail atualizações ocasionais, dicas e informações de novos produtos.</span>
+          </label>
+      </div>
+  </form>
+</div>
