@@ -1,0 +1,9 @@
+.sair-perfil {
+  height: 100%;
+  padding-bottom: 2vh;
+}
+
+.sair-perfil p{
+  position: absolute;
+  bottom: 0px;
+}

@@ -1,7 +1,9 @@
 .label {
   color: rgb(255,255,255,0.7);
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 .card-perfil {
-  border-bottom: 1px solid rgb(255,255,255,0.6)
+  border-bottom: 1px solid rgb(255,255,255,0.6);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
