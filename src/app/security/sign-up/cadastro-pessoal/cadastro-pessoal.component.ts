@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../user.service';
 import { User } from '../../user.model';
 
@@ -18,18 +18,20 @@ export class CadastroPessoalComponent implements OnInit {
 
   ngOnInit() {
     this.cadastroPessoalForm = this.fb.group({
-      nome: ['', Validators.required],
+      nome: ['', Validators.required ],
       sobrenome: ['', Validators.required],
-      email: ['', Validators.required],
-      confirmarEmail: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
+      confirmarEmail: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
       emailAlternativo: ['', Validators.required],
       checkAtualizacoes: [false],
     });
   }
 
-  efetuarCadastroPessoal(){
+  efetuarCadastroPessoal() {
       this.user = Object.assign(this.user, this.cadastroPessoalForm.value);
       this.userService.informacoesCadastroPessoal(this.user);
+
   }
+
 
 }

@@ -17,7 +17,7 @@ export class CadastroSenhaComponent implements OnInit {
 
   ngOnInit() {
     this.cadastroSenhaForm = this.fb.group({
-      senha: ['', Validators.required],
+      senha: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
       confirmacaoSenha: ['', Validators.required]
     });
   }

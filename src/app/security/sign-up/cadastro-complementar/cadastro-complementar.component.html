@@ -1,51 +1,30 @@
 <div class="container-header-login">
-  <h3 class="text-header3">
-      <strong>Complemente!</strong>
-  </h3>
+    <h3 class="text-header3">
+        <strong>Complemente!</strong>
+    </h3>
 </div>
 <div class="container-cadastro">
-  <form class="loginCadastro" [formGroup]="cadastroComplementForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
-    <div class="form-group">
-        <input type="text" formControlName="telefone" name="telefone" placeholder="Telefone" class="form-input" id="telefone">
-    </div>
-    <div class="form-group-cep-uf">
-        <input type="text" id="form-input-cep" class="form-input-cep-uf" formControlName="cep" name="cep" placeholder="Cep">
-        <select type="text" id="form-input-uf" class="form-input-cep-uf" formControlName="uf" name="uf" placeholder="UF">
-          <option value="AC"> AC</option>
-          <option value="AL">AL</option>
-          <option value="AP">AP</option>
-          <option value="AM">AM</option>
-          <option value="BA">AB</option>
-          <option value="CE">CE</option>
-          <option value="DF">DF</option>
-          <option value="ES">DF</option>
-          <option value="GO">GO</option>
-          <option value="MA">MA</option>
-          <option value="MT">MT</option>
-          <option value="MS">MS</option>
-          <option value="MG">MG</option>
-          <option value="PA">PA</option>
-          <option value="PB">PB</option>
-          <option value="PR">PR</option>
-          <option value="PE">PE</option>
-          <option value="PI">PI</option>
-          <option value="RJ">RJ</option>
-          <option value="RN">RN</option>
-          <option value="RS">RS</option>
-          <option value="RO">RO</option>
-          <option value="RR">RR</option>
-          <option value="SC">SC</option>
-          <option value="SP">SP</option>
-          <option value="SE">SE</option>
-          <option value="TO">TO</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <input type="text" formControlName="cidade" name="cidade" placeholder="Cidade" class="form-input" id="cidade">
-    </div>
-    <div class="form-group">
-        <input type="text" formControlName="quemSou" name="quemSou" placeholder="Quem sou?" class="form-input" id="quemSou">
-    </div>
-    <button type="submit" class="btn-principal" id="btnLogin" (click)="efetuarCadastroComplementar()">Próximo</button>
-  </form>
+    <form class="loginCadastro" [formGroup]="cadastroComplementForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+
+        <app-input-container class="form-group" errorMessage="*Campo telefone é obrigatório.">
+            <input type="text" formControlName="telefone" name="telefone" placeholder="Telefone" class="form-input" id="telefone">
+        </app-input-container>
+        <div class="form-group-cep-uf">
+            <app-input-container class="form-group" errorMessage="O campo Cep obrigatório.">
+                <input type="text" id="form-input-cep" class="form-input-cep-uf" formControlName="cep" name="cep" placeholder="Cep" class="form-input">
+            </app-input-container>
+
+            <app-input-container class="form-group" errorMessage="O campo UF obrigatório.">
+                <input type="text" id="form-input-uf" class="form-input-cep-uf" formControlName="uf" value="uf" placeholder="UF" class="form-input">
+            </app-input-container>
+        </div>
+        <app-input-container class="form-group" errorMessage="O campo Cidade obrigatório.">
+            <input type="text" formControlName="cidade" name="cidade" placeholder="Cidade" class="form-input" id="cidade">
+        </app-input-container>
+        <app-input-container class="form-group" errorMessage="O campo de Identificação obrigatório.">
+            <input type="text" formControlName="quemSou" name="quemSou" placeholder="Quem sou?" class="form-input" id="quemSou">
+        </app-input-container>
+
+        <button type="submit" class="btn-principal" id="btnLogin" (click)="efetuarCadastroComplementar()">Próximo</button>
+    </form>
 </div>
