@@ -27,6 +27,11 @@ import { CadastroPessoalComponent } from './security/sign-up/cadastro-pessoal/ca
 import { CadastroComplementarComponent } from './security/sign-up/cadastro-complementar/cadastro-complementar.component';
 import { CadastroSenhaComponent } from './security/sign-up/cadastro-senha/cadastro-senha.component';
 import { VerificacaoCadastroComponent } from './security/sign-up/verificacao-cadastro/verificacao-cadastro.component';
+import { PerfilComponent } from './perfil/perfil/perfil.component';
+import { DescricaoPerfilComponent } from './perfil/descricao-perfil/descricao-perfil.component';
+import { LinksPerfilComponent } from './perfil/links-perfil/links-perfil.component';
+import { SairPerfilComponent } from './perfil/sair-perfil/sair-perfil.component';
+import { LinkComponent } from './perfil/links-perfil/link/link.component';
 import { InputComponent } from './shared/input/input.component';
 
 
@@ -50,6 +55,11 @@ import { InputComponent } from './shared/input/input.component';
     CadastroComplementarComponent,
     CadastroSenhaComponent,
     VerificacaoCadastroComponent,
+    PerfilComponent,
+    DescricaoPerfilComponent,
+    LinksPerfilComponent,
+    SairPerfilComponent,
+    LinkComponent
     InputComponent
   ],
   imports: [

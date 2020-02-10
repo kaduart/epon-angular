@@ -1,0 +1,40 @@
+.cabecalho-perfil {
+  border-bottom: 0.5px solid black;
+  padding: 5px;
+}
+.barra-lateral-perfil {
+  border-right: 50px solid #252526;
+  color: white;
+  padding: 0 40px 0 40px;
+}
+.botao-esquizofrenico {
+  background-color: rgb(0,0,0,0);
+  width: 75px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  border-right: 1px solid white;
+  height: 100%;
+}
+
+.dados-perfil {
+  background-color: black;
+  grid-area: conteudo;
+}
+.cabecalho-perfil {
+  background-color:#3E5055;
+  grid-area: navegacao;
+}
+.barra-lateral-perfil {
+  background-color: #3E5055;
+  grid-area: lateral;
+}
+.perfil {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 61px 1fr;
+  grid-template-areas:
+      'navegacao navegacao'
+      'lateral conteudo';
+}
