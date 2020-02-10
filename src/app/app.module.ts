@@ -32,6 +32,7 @@ import { DescricaoPerfilComponent } from './perfil/descricao-perfil/descricao-pe
 import { LinksPerfilComponent } from './perfil/links-perfil/links-perfil.component';
 import { SairPerfilComponent } from './perfil/sair-perfil/sair-perfil.component';
 import { LinkComponent } from './perfil/links-perfil/link/link.component';
+import { InputComponent } from './shared/input/input.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { LinkComponent } from './perfil/links-perfil/link/link.component';
     LinksPerfilComponent,
     SairPerfilComponent,
     LinkComponent
+    InputComponent
   ],
   imports: [
     BrowserModule,
