@@ -59,7 +59,7 @@ import { InputComponent } from './shared/input/input.component';
     DescricaoPerfilComponent,
     LinksPerfilComponent,
     SairPerfilComponent,
-    LinkComponent
+    LinkComponent,
     InputComponent
   ],
   imports: [
