@@ -1,0 +1,37 @@
+<div class="container-header-login">
+    <h3 class="text-header3">
+        <strong>Crie uma conta!</strong>
+    </h3>
+</div>
+<div class="container-cadastro">
+    <form #form="ngForm" class="loginCadastro" [formGroup]="cadastroPessoalForm" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+        <app-input-container class="form-group" errorMessage="O campo nome é obrigatório.">
+            <input type="text" id="form-input" class="form-input" formControlName="nome" name="nome" placeholder="Nome" autocomplete="off">
+        </app-input-container>
+
+        <app-input-container class="form-group" errorMessage="O campo sobrenome é obrigatório.">
+            <input type="text" id="form-input" class="form-input" formControlName="sobrenome" name="sobrenome" placeholder="Sobrenome" autocomplete="off">
+        </app-input-container>
+
+        <app-input-container class="form-group" errorMessage="O campo e-mail obrigatório.">
+            <input type="email" formControlName="email" name="email" placeholder="Email" class="form-input" id="email" autocomplete="off">
+        </app-input-container>
+
+        <app-input-container class="form-group" errorMessage="É necessário confirmar o e-mail.">
+            <input type="email" formControlName="confirmarEmail" name="confirmarEmail" placeholder="Confirme email" class="form-input" id="confirmarEmail" autocomplete="off">
+        </app-input-container>
+
+        <div class="form-group" erroMessage="">
+            <input type="email" formControlName="emailAlternativo" name="emailAlternativo" placeholder="Email alternativo" class="form-input" id="emailAlternativo" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn-principal" [disabled]="!cadastroPessoalForm.valid" id="btnLogin" (click)="efetuarCadastroPessoal()">Próximo</button>
+        <div class="checkbox-login">
+            <label class="checkbox-label">
+        <input type="checkbox" formControlName="checkAtualizacoes" name="checkAtualizacoes" id="checkAtualizacoes"
+          class="checkbox-input">
+          <span>Aceito receber por e-mail atualizações ocasionais, dicas e informações de novos produtos.</span>
+      </label>
+        </div>
+    </form>
+</div>

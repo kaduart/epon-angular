@@ -18,15 +18,15 @@ export class SignInComponent implements OnInit {
 
   constructor( private userService: UserService,
                private fb: FormBuilder,
-               private router: Router ) { 
+               private router: Router ) {
                 this.loginForm = this.fb.group({
                   username: ['', Validators.required],
                   password: ['', Validators.required],
-                })
+                });
               }
 
   ngOnInit() {
-    
+
   }
 
   fazerLogin( ) {
@@ -37,7 +37,8 @@ export class SignInComponent implements OnInit {
           this.router.navigate(['/home']);
     },
     (err: HttpErrorResponse) => {
-      
+      console.log(err);
+
     });
   }
 

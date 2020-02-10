@@ -1,49 +1,303 @@
-.navbar {
-    background-color: #3E5055;
-    margin-right: -63px;
-    height: 61px;
-    margin-left: -21px;
-    padding-left: 28px;
-    margin-top: -8px;
+@font-face{
+  font-family: "Roboto";
+  src: url('../../../assets/fonts/roboto/Roboto-Bold.ttf');
+  font-weight: bold;
+}
+@font-face{
+  font-family: "Segoe UI";
+  src: url('../../../assets/fonts/segoe-ui.otf');
 }
 
-.form-inline {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: right;
-    margin-right: 46px;
-    margin-left: 0px;
-    padding-left: 213px;
-    margin-bottom: -6px;
+main {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 61px 1fr 50px;
+  grid-template-areas:
+      'navegacao'
+      'conteudo'
+      'rodape';
+}
+header {
+  grid-area: navegacao;
+  background-color: #3E5055;
+}
+section {
+  grid-area: conteudo;
+
+}
+footer {
+  grid-area: rodape;
+  margin-bottom: 0px;;
 }
 
-.btn-outline-light:not(:disabled):not(.disabled).active {
-    color: #FFFFFF;
-    background-color: #3E5055;
-    border-color: #f8f9fa;
+.navbar-progress {
+  width: 305px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0px;
 }
 
-.btn-outline-light {
-    color: #FFFFFF;
-    background-color: transparent;
-    background-image: none;
-    border-color: #3E5055;
-    padding: 7px 9px;
-    font-size: 9px;
+ul li {
+  display: inline;
+  margin-left: 5px;
+}
+
+.circle-progress {
+  height: 20px;
+  width: 20px;
+}
+.rect-progress {
+  width: 62px;
+  height: 4px;
+  margin-left: 5px;
+}
+
+.rect {
+  width:62px;
+  height:4px;
+  fill:rgba(209, 209, 209, 1);
+}
+
+.circle-default{
+  fill: rgba(209, 209, 209, 1)
+}
+.circle-active{
+  fill:rgba(79, 201, 93, 1);
+}
+
+.circle-check{
+  fill: rgba(166, 214, 172, 1);
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: -54px;
-    padding-bottom: 224px;
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 133px;
 }
 
-.board {
-    box-sizing: border-box;
-    margin-bottom: 38px;
+.btn-lg {
+  padding: 0.5rem 5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  margin-left: -3px;
+  margin-right: -87px;
+  padding-right: 137px;
+  padding-left: 136px;
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+  margin-bottom: 23px;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  margin-right: -77px;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: -0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -11px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-right: -79px;
+  margin-left: -13px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  margin-left: -6px;
+  margin-right: 18px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  margin-right: -23px;
+}
+
+.text-center {
+  text-align: center !important;
+  margin-right: -69px;
+}
+
+.container-login {
+  left: 35px;
+  width: 291px;
+  height: 340px;
+  opacity: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 137px;
+  margin-top: 77px;
+}
+
+.form-input {
+  width: 289px;
+  height: 48px;
+
+  border: 1px solid #9A9A9A;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.btn-principal {
+  width: 291px;
+  height: 40px;
+
+  background: #d1d1d1 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+
+  font: Regular 16px/12px Segoe UI;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.form-reset-password {
+  margin-bottom: 20px;
+  margin-left: 45px;
+  width: 187px;
+  height: 49px;
+
+  text-align: center;
+  font: 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #333333;
+  opacity: 1;
+}
+.checkbox-input {
+  width: 19px;
+  height: 20px;
+  margin-right: 5px;
+}
+.checkbox-login {
+  width: 200px;
+  height: 21px;
+  margin-left: 56px;
+  margin-top: 10px;
+}
+.checkbox-label {
+  text-align: center;
+  font: 16px/21px Segoe UI;
+  letter-spacing: 0;
+  color: #d1d1d1;
+  opacity: 1;
+}
+@media(min-width: 766px){
+  form {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .text-header3{
+    font-size: 32px;
+    width: 240px;
+    height: 43px;
+  }
+  .container-header-login{
+      margin-top: 45px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .form-group label {
+      margin-bottom: 0px;
+  }
+
+  .form-input {
+      width: 490px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .btn-principal {
+      width: 490px;
+  }
+
+  .form-reset-password {
+      display: block;
+      float: left;
+      clear: both;
+      margin-bottom: 20px;
+      margin-left: -220px;
+      width: 275px;
+      height: 25px;
+      text-align: left;
+  }
+
+  .checkbox-login {
+      margin-left: -260px;
+      margin-top: 20px;
+  }
+
+  .navbar-progress {
+    width: 590px;
+  }
+
+  ul {
+    margin-top: 150px;
+  }
+
+  ul li {
+    margin-left: 15px;
+  }
+
+  .rect-progress {
+    width: 116px;
+    margin-left: 15px;
+  }
+
+  .rect {
+    width:116px;
+  }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 1079px) {
+  ul {
     margin-top: 40px;
+  }
+
 }

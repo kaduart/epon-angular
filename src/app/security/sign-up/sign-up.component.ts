@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormDataService } from './data/form-data.service';
+import { Component, OnInit } from '@angular/core';
+import { TelaAtual } from './tela-atual.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,14 +9,28 @@ import { FormDataService } from './data/form-data.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private formDataService: FormDataService) { }
-  
-  title = 'EPON';
-  @Input() formData;
+  opcaoTela: TelaAtual;
+
+  constructor(route: ActivatedRoute) {
+    route.url.subscribe(() => {
+      switch(route.snapshot.firstChild.url[0].path) {
+        case 'cadastroPessoal':
+          this.opcaoTela = TelaAtual.cadastroPessoalComponent;
+          break;
+        case 'cadastroComplementar':
+          this.opcaoTela = TelaAtual.cadastroComplementarComponent;
+          break;
+        case 'cadastroSenha':
+          this.opcaoTela = TelaAtual.cadastroSenhaComponent;
+          break;
+        case 'verficacaoCadastro':
+          this.opcaoTela = TelaAtual.verificacaoCadastroComponent;
+          break;
+      }
+    });
+  }
 
   ngOnInit() {
-    this.formData = this.formDataService.getFormData();
-    console.log(this.title + 'loaded!');
   }
 
 }

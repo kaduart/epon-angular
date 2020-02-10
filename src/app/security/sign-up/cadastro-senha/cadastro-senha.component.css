@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('../../../../assets/fonts/roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../../../../assets/fonts/segoe-ui.otf');
+}
+
+.container-cadastro {
+    left: 35px;
+    width: 291px;
+    height: 293px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 137px;
+    margin-top: 77px;
+}
+
+.container-header-login {
+    left: 77px;
+    width: 206px;
+    height: 43px;
+    text-align: left;
+    font: Bold 32px/43px Roboto;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-input {
+    width: 289px;
+    height: 48px;
+    border: 1px solid #9A9A9A;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.btn-principal {
+    width: 291px;
+    height: 40px;
+    background: #d1d1d1 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+    font: Regular 16px/12px Segoe UI;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+@media(min-width: 766px) {
+    .text-header3 {
+        font-size: 32px;
+        width: 240px;
+        height: 43px;
+    }
+    .container-cadastro {
+        left: 35px;
+        width: 539px;
+        height: 293px;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 137px;
+        margin-top: 77px;
+        box-shadow: 0px 3px 6px #00000029;
+        border: 3px solid #D1D1D1;
+        border-radius: 12px;
+    }
+    form {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-group label {
+        margin-bottom: 0px;
+    }
+    .form-input {
+        width: 490px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-principal {
+        width: 490px;
+    }
+}
+
+.ng-valid {
+    border-left: 5px solid #4FC95D;
+}
+
+.form-input.ng-pristine.ng-touched.ng-invalid {
+    border-left: 5px solid #FD0000;
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+
+@media screen and (min-width: 1079px) {}

@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('../../../../assets/fonts/roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../../../../assets/fonts/segoe-ui.otf');
+}
+
+.container-cadastro {
+    left: 35px;
+    width: 291px;
+    height: 510px;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 137px;
+    margin-top: 77px;
+}
+
+.container-header-login {
+    left: 77px;
+    width: 206px;
+    height: 43px;
+    text-align: left;
+    font: Bold 32px/43px Roboto;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-input-fullname {
+    width: 490px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9A9A9A;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.form-group-fullname {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#form-input-nome {
+    width: 289px;
+    height: 48px;
+    margin-right: 0px;
+    margin-bottom: 1rem;
+}
+
+#form-input-sobrenome {
+    width: 289px;
+    height: 48px;
+}
+
+.form-input {
+    width: 289px;
+    height: 48px;
+    border: 1px solid #9A9A9A;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.btn-principal {
+    width: 291px;
+    height: 40px;
+    background: #d1d1d1 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+    font: Regular 16px/12px Segoe UI;
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.checkbox-input {
+    width: 19px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.checkbox-login {
+    width: 200px;
+    height: 21px;
+    margin-left: 56px;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    text-align: -webkit-auto;
+    font: 16px Segoe UI;
+    letter-spacing: 0;
+    color: #000000;
+    width: 270px;
+    height: 42px;
+}
+
+@media(min-width: 766px) {
+    .text-header3 {
+        font-size: 32px;
+        width: 240px;
+        height: 43px;
+    }
+    .container-cadastro {
+        left: 35px;
+        width: 539px;
+        height: 529px;
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 137px;
+        margin-top: 77px;
+        box-shadow: 0px 3px 6px #00000029;
+        border: 3px solid #D1D1D1;
+        border-radius: 12px;
+    }
+    form {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-group-fullname {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+    #form-input-nome {
+        width: 240px;
+        height: 48px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    #form-input-sobrenome {
+        width: 240px;
+        height: 48px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-group label {
+        margin-bottom: 0px;
+    }
+    .form-input {
+        width: 490px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-principal {
+        width: 490px;
+    }
+    .checkbox-login {
+        margin-left: -260px;
+        margin-top: 20px;
+    }
+    .checkbox-label {
+        text-align: center;
+        font: 21px Segoe UI;
+        width: 440px;
+        height: 95px;
+    }
+}
+
+.ng-valid {
+    border-left: 5px solid #4FC95D;
+}
+
+.form-input.ng-pristine.ng-touched.ng-invalid {
+    border-left: 5px solid #FD0000;
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+
+@media screen and (min-width: 1079px) {}

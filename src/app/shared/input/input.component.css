@@ -1,0 +1,11 @@
+.alert-danger {
+    background-color: #FD0000;
+    color: #FFFFFF;
+    top: 485px;
+    left: 35px;
+    width: 290px;
+    height: 38px;
+    background: #FD0000 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+}

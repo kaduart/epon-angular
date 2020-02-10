@@ -1,21 +1,17 @@
-.navbar-header {
-    background-color: #3E5055;
-    width: 140%;
-    height: 61px;
-}
 ul {
     position: absolute;
     top: 20px;
-    right: 0;
-    list-style:none;
+    right: 15px;
+    list-style: none;
 }
 
 ul li {
     display: inline;
     margin-right: 20px;
 }
+
 .btn-header {
-    text-decoration:none;
+    text-decoration: none;
     width: 88px;
     height: 24px;
     font: Regular 16px/21px Roboto;
@@ -23,8 +19,9 @@ ul li {
     color: #FFFFFF;
     opacity: 1;
 }
+
 .btn-header-active {
-    text-decoration:none;
+    text-decoration: none;
     padding-left: 40px;
     padding-bottom: 9px;
     padding-right: 40px;
@@ -34,4 +31,10 @@ ul li {
     border: 2px solid;
     border-radius: 8px;
     opacity: 1;
+}
+
+@media(min-width: 766px){
+    ul {
+        right: 21px;
+    }
 }
